@@ -1,0 +1,56 @@
+.contenedor-oscuro {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.card {
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    transition: background-color .5s;
+}
+
+.card img {
+    height: 100%;
+    transition: filter .5s;
+}
+
+.imagen {
+    height: 100%;
+    position: relative;
+}
+
+.card-img-overlay {
+    top: auto;
+    opacity: 0;
+    transition: .5s;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.card-link {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.card:hover .card-img-overlay {
+    opacity: 1;
+}
+
+.card:hover img {
+    filter: brightness(0.3);
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+#peliculas {
+    padding: 0;
+}
+
+#publicidad img {
+    width: 100%;
+}

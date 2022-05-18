@@ -1,0 +1,129 @@
+main {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 0.8rem;
+    background-color: rgba(0, 0, 0, .4);
+
+}
+
+#traductor {
+    margin-bottom: 3rem;
+}
+
+#traductor + div {
+    padding-left: 3.8rem;
+    padding-right: 3.8rem;
+}
+
+.input-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, .5);
+    color: #333;
+    border-radius: .8rem;
+    border: none;
+}
+
+.form-control::placeholder {
+    color: #333;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.btn-idioma {
+    width: 8rem;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 0.8rem;
+    transition: color .3s ease-in-out,background-color .3s ease-in-out !important;
+}
+
+.btn-idioma:active{
+    outline: 3px solid #7b2cbf !important;
+}
+
+.btn-idioma img {
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.input-container textarea {
+    resize: none;
+    border-radius: .8rem;
+}
+
+.input-container textarea:focus {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.btn-botton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    border-radius: 100%;
+}
+
+.btn-botton:hover {
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.btn-formulario {
+    width: 16rem;
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+    background-color: rgba(255, 255, 255, .8);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    border-radius: .8rem;
+    transition: color .3s ease-in-out,background-color .3s ease-in-out !important;
+}
+
+.btn-formulario:hover {
+    color: #fff !important;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.btn-formulario:active {
+    outline: 3px solid #7b2cbf !important;
+}
+
+.resultado-container {
+    border-radius: .8rem;
+    background-color: rgba(255, 255, 255, .5);
+    padding-top: .5rem;
+}
+
+.resultado-container__texto {
+    position: relative;
+    height: 8rem;
+    color: #212529;
+}
+
+.botton-bar {
+    background-color: rgba(255, 255, 255, .5);
+    border-bottom-left-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.btn-bar__item {
+    font-size: 1.5rem;
+    border-radius: 100%;
+}
+
+.btn-bar__item:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.btn-botton:active, .btn-bar__item:active {
+    background-color: #fff;
+}

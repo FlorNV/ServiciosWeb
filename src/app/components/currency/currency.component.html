@@ -1,0 +1,135 @@
+<main class="container-fluid">
+    <div class="row">
+        <div class="d-none d-md-block col-md-8">
+            <div class="container text-center table-responsive">
+                <table class="table table-bordered table-light caption-top align-middle">
+                    <caption>Conversor de divisas</caption>
+                    <thead>
+                        <tr>
+                            <th colspan="2"></th>
+                            <th><img class="img-fluid divisa-imagen" src="assets/img/united-states.png" alt=""> USD</th>
+                            <th><img class="img-fluid divisa-imagen" src="assets/img/european.png" alt="">EUR</th>
+                            <th><img class="img-fluid divisa-imagen" src="assets/img/united-kingdom.png" alt="">GBP</th>
+                            <th><img class="img-fluid divisa-imagen" src="assets/img/japan.png" alt="">JPY</th>
+                            <th><img class="img-fluid divisa-imagen" src="assets/img/china.png" alt="">CNY</th>
+                            <th><img class="img-fluid divisa-imagen" src="assets/img/australia.png" alt="">AUD</th>
+                            <th><img class="img-fluid divisa-imagen" src="assets/img/bitcoin.png" alt="">BTC</th>
+                            <th><img class="img-fluid divisa-imagen" src="assets/img/argentina.png" alt="">ARS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <img class="img-fluid divisa-imagen" src="assets/img/united-states.png" alt="">
+                            </th>
+                            <th scope="row">
+                                <p>1 USD</p>
+                                <p>Inverse</p>
+                            </th>
+                            <td class="negro"><p>1.000000</p><p>1.000000</p></td>
+                            <td><p>0.919901</p><p>1.087074</p></td>
+                            <td><p>0.811469</p><p>1.232332</p></td>
+                            <td><p>108.9079</p><p>0.009182</p></td>
+                            <td><p>7.057569</p><p>0.141692</p></td>
+                            <td><p>1.619886</p><p>0.617328</p></td>
+                            <td><p>0.000140</p><p>7148.757</p></td>
+                            <td><p>64.87725</p><p>0.015414</p></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <img class="img-fluid divisa-imagen" src="assets/img/european.png" alt="">
+                            </th>
+                            <th scope="row">
+                                <p>1 EUR</p>
+                                <p>Inverse</p>
+                            </th>
+                            <td><p>1.087074</p><p>0.919901</p></td>
+                            <td class="negro"><p>1.000000</p><p>1.000000</p></td>
+                            <td><p>0.882127</p><p>1.133623</p></td>
+                            <td><p>118.3910</p><p>0.008447</p></td>
+                            <td><p>7.672100</p><p>0.130342</p></td>
+                            <td><p>1.760936</p><p>0.567880</p></td>
+                            <td><p>0.000152</p><p>6576.146</p></td>
+                            <td><p>70.52637</p><p>0.014179</p></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <img class="img-fluid divisa-imagen" src="assets/img/united-kingdom.png" alt="">
+                            </th>
+                            <th scope="row">
+                                <p>1 GBP</p>
+                                <p>Inverse</p>
+                            </th>
+                            <td><p>1.232332</p><p>0.811469</p></td>
+                            <td><p>1.133623</p><p>0.882127</p></td>
+                            <td class="negro"><p>1.000000</p><p>1.000000</p></td>
+                            <td><p>134.2108</p><p>0.007451</p></td>
+                            <td><p>8.697272</p><p>0.114979</p></td>
+                            <td><p>1.996238</p><p>0.500942</p></td>
+                            <td><p>0.000172</p><p>5800.997</p></td>
+                            <td><p>79.95034</p><p>0.012508</p></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <img class="img-fluid divisa-imagen" src="assets/img/russia.png" alt="">
+                            </th>
+                            <th scope="row">
+                                <p>1 RUB</p>
+                                <p>Inverse</p>
+                            </th>
+                            <td><p>0.013226</p><p>75.61134</p></td>
+                            <td><p>0.012166</p><p>82.19511</p></td>
+                            <td><p>0.010732</p><p>93.17830</p></td>
+                            <td><p>1.440365</p><p>0.694268</p></td>
+                            <td><p>0.093340</p><p>10.71351</p></td>
+                            <td><p>0.021424</p><p>46.67696</p></td>
+                            <td><p>0.000002</p><p>540527.1</p></td>
+                            <td><p>0.858036</p><p>1.165452</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex contenedor-oscuro">
+            <form id="conversor" class="align-self-center">
+                <h4>Conversor de Divisas</h4>
+                <div class="mb-3">
+                  <label for="cantidad" class="form-label">Cantidad</label>
+                  <input type="number" class="form-control shadow-none" id="cantidad" placeholder="Cantidad">
+                </div>
+                <div class="mb-3">
+                    <label for="origen" class="form-label">De</label>
+                    <select id="origen" class="form-select form-control shadow-none">
+                        <option selected disabled>Selecciona divisa</option>
+                        <option value="usd">USD Dólares EEUU</option>
+                        <option value="eur">EUR Euros</option>
+                        <option value="gbp">GBP Libras Esterlinas</option>
+                        <option value="jpy">JPY Yen</option>
+                        <option value="CNY">GBP Yuan</option>
+                        <option value="AUD">AUD Dólares Australianos</option>
+                        <option value="BTC">BTC Bitcoin</option>
+                        <option value="ARS">ARS Pesos Argentinos</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="origen" class="form-label">A</label>
+                    <select id="origen" class="form-select form-control shadow-none">
+                      <option selected disabled>Selecciona divisa</option>
+                      <option value="usd">USD Dólares EEUU</option>
+                      <option value="eur">EUR Euros</option>
+                      <option value="gbp">GBP Libras Esterlinas</option>
+                      <option value="jpy">JPY Yen</option>
+                      <option value="CNY">GBP Yuan</option>
+                      <option value="AUD">AUD Dólares Australianos</option>
+                      <option value="BTC">BTC Bitcoin</option>
+                      <option value="ARS">ARS Pesos Argentinos</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control resultado shadow-none" type="text" value="Resultado" readonly>
+                </div>
+                <button type="submit" class="btn btn-formulario shadow-none">CONVERTIR</button>
+            </form>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,106 @@
+.divisa-imagen {
+    display: block;
+    height: 2rem;
+    margin: auto;
+}
+
+.table {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 1rem 1rem 0.5rem rgba(0, 0, 0, .6);
+    border-color: #aaa;
+}
+
+caption {
+    text-align: center;
+    background-color: #111;;
+}
+
+.table p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+tr > td > p {
+    color: #7b2cbf;
+}
+
+tr > th > p {
+    text-align: start;
+}
+
+.negro p {
+    color: #000;
+}
+
+.table > :not(:first-child) {
+    border-top: none
+}
+
+.table thead {
+    border-top: 2px solid #111 !important;
+}
+
+.table th {
+    background-color: #ddd;
+}
+
+.contenedor-oscuro {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+#conversor {
+    width: 100%;
+    padding: 2rem 3rem;
+}
+
+#conversor h4 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, .4);
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border-radius: .8rem;
+}
+
+#conversor label, #conversor h4 {
+    color: #fff;
+} 
+
+.resultado {
+    background-color: rgba(255, 255, 255, .5) !important;
+    padding: 1rem;
+    color: #000;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, .5);
+    color: #333;
+    border-radius: .8rem;
+    border: none;
+}
+
+.form-control::placeholder {
+    color: #333;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.btn-formulario {
+    width: 100%;
+    background-color: rgba(255, 255, 255, .8);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    border-radius: .8rem;
+    transition: color .3s ease-in-out,background-color .3s ease-in-out !important;
+}
+
+.btn-formulario:hover {
+    color: #fff !important;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.btn-formulario:active {
+    outline: 3px solid #7b2cbf !important;
+}

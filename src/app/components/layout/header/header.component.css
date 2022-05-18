@@ -1,0 +1,42 @@
+.fondo {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.nav-item .nav-link {
+    color: #888 !important;
+    border-radius: .8rem;
+    display: block;
+    padding: 0.5rem 1rem !important;
+    margin-right: 0.5rem;
+    transition: color .3s ease-in-out,background-color .3s ease-in-out;
+}
+
+.btn-buscar {
+    color: #888 !important;
+    border-radius: .8rem;
+    transition: color .3s ease-in-out,background-color .3s ease-in-out !important;
+}
+
+.nav-item .nav-link:hover, .btn-buscar:hover {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, .5);
+    color: #333;
+    border-radius: .8rem;
+    border: none;
+}
+
+.form-control::placeholder {
+    color: #333;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%28255, 255, 255%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

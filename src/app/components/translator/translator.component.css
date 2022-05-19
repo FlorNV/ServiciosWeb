@@ -43,6 +43,11 @@ main {
     transition: color .3s ease-in-out,background-color .3s ease-in-out !important;
 }
 
+.btn-selected {
+    background-color: rgba(0, 0, 0, .6);
+    color: #fff;
+}
+
 .btn-idioma:active{
     outline: 3px solid #7b2cbf !important;
 }
@@ -126,4 +131,25 @@ main {
 
 .btn-botton:active, .btn-bar__item:active {
     background-color: #fff;
+}
+
+
+
+
+
+
+
+
+.rojo{
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.azul{
+    background-color: blue;
+    text-align: center;
+    color: white;
+    font-size: 25px;
 }

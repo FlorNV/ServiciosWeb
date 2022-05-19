@@ -1,44 +1,29 @@
 <main class="container contenedor-oscuro p-5">
     <form class="px-5" id="traductor" action="">
         <div class="row idioma-container gy-3">
-            <div class="col-6 col-md-3 text-center">
-                <button class="btn btn-idioma shadow-none" type="button"><img src="assets/img/italia.png" alt="">Italiano</button>
-            </div>
-            <div class="col-6 col-md-3 text-center">
-                <button class="btn btn-idioma shadow-none" type="button"><img src="assets/img/france.png" alt="">Frances</button>
-            </div>
-            <div class="col-6 col-md-3 text-center">
-                <button class="btn btn-idioma shadow-none" type="button"><img src="assets/img/united-kingdom.png" alt="">Ingles</button>
-            </div>
-            <div class="col-6 col-md-3 text-center">
-                <button class="btn btn-idioma shadow-none" type="button"><img src="assets/img/spain.png" alt="">Español</button>
+            <div *ngFor="let b of buttonsSourceLanguage" class="col-6 col-md-3 text-center">
+                <button [ngClass]="{'btn-selected': b.selected}" (click)="selectSourceLanguage(b)" class="btn btn-idioma shadow-none" type="button">
+                    <img src="assets/img/{{b.image}}" alt="">{{b.language}}
+                </button>
             </div>
         </div>
         <div class="input-container">
-            <textarea class="form-control shadow-none" rows="5" name="">Estoy traduciendo este texto con esta maravillosa app!</textarea>
+            <textarea class="form-control shadow-none" rows="5" name="" [(ngModel)]="text" name="text"></textarea>
             <button type="button" class="btn btn-botton shadow-none"><i class="bi bi-mic-fill"></i></button>
         </div>
         <div class="row idioma-container gy-3">
-            <div class="col-6 col-md-3 text-center">
-                <button class="btn btn-idioma shadow-none" type="button"><img src="assets/img/italia.png" alt="">Italiano</button>
-            </div>
-            <div class="col-6 col-md-3 text-center">
-                <button class="btn btn-idioma shadow-none" type="button"><img src="assets/img/france.png" alt="">Frances</button>
-            </div>
-            <div class="col-6 col-md-3 text-center">
-                <button class="btn btn-idioma shadow-none" type="button"><img src="assets/img/united-kingdom.png" alt="">Ingles</button>
-            </div>
-            <div class="col-6 col-md-3 text-center">
-                <button class="btn btn-idioma shadow-none" type="button"><img src="assets/img/spain.png" alt="">Español</button>
+            <div *ngFor="let b of buttonsTargetLanguage" class="col-6 col-md-3 text-center">
+                <button [ngClass]="{'btn-selected': b.selected}" (click)="selectTargetLanguage(b)" class="btn btn-idioma shadow-none" type="button">
+                    <img src="assets/img/{{b.image}}" alt="">{{b.language}}
+                </button>
             </div>
         </div>
-        <button type="submit" class="btn btn-formulario shadow-none">TRADUCIR</button>
+        <button (click)="translateText()" type="submit" class="btn btn-formulario shadow-none">TRADUCIR</button>
     </form>
     <div class="container">
         <div class="row row-cols-1 resultado-container">
             <div class="col resultado-container__texto">
-                I am translating this text with this wonderful app!
-                <!-- {{ textoTraducido }} -->
+                {{ translatedText }}
                 <button type="button" class="btn btn-botton shadow-none"><i class="bi bi-volume-up-fill"></i></button>
             </div>
             <div class="col">
@@ -47,7 +32,7 @@
                         <button type="button" class="btn btn-bar__item shadow-none" title="Copiar"><i class="bi bi-files"></i></button>
                     </div>
                     <div class="col-4 text-center">
-                        <button type="button" class="btn btn-bar__item shadow-none" title="Limpiar"><i class="bi bi-eraser"></i></button>
+                        <button (click)="translatedText=''" type="button" class="btn btn-bar__item shadow-none" title="Limpiar"><i class="bi bi-eraser"></i></button>
                     </div>
                     <div class="col-4 text-center">
                         <button type="button" class="btn btn-bar__item shadow-none" title="Salir"><i class="bi bi-x-square"></i></button>

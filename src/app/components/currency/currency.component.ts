@@ -9,12 +9,12 @@ import { CurrencyService } from 'src/app/services/currency.service';
 })
 export class CurrencyComponent implements OnInit {
 
-  currencies!: Array<Currency>;
-  currency!: Currency;
+  divisas!: Array<Currency>;
+  divisa!: Currency;
   amount!: number;
   from!: Currency;
   to!: Currency;
-  convertion!: any;
+  conversion!: any;
   
 
   constructor(private currencyService: CurrencyService) { 
@@ -28,19 +28,19 @@ export class CurrencyComponent implements OnInit {
 
   getCurrencies(){
     this.currencyService.getCurrencies().subscribe( result => {
-      this.currencies = new Array<Currency>();
+      this.divisas = new Array<Currency>();
       for (const key in result.result) {
-        this.currency = new Currency();
-        this.currency.code = key;
-        this.currency.description = result.result[key];
-        this.currencies.push(this.currency);
+        this.divisa = new Currency();
+        this.divisa.code = key;
+        this.divisa.description = result.result[key];
+        this.divisas.push(this.divisa);
       }
     })
   }
 
   convert(){
     this.currencyService.getConversion(this.from.code, this.to.code, this.amount).subscribe(result => {
-      this.convertion = result.result;
+      this.conversion = result.result;
     })
   }
 }

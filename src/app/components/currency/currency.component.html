@@ -101,18 +101,19 @@
                     <label for="origen" class="form-label">De</label>
                     <select [(ngModel)]="from" name="from" id="origen" class="form-select form-control shadow-none">
                         <option selected disabled>Selecciona divisa</option>
-                        <option *ngFor="let c of currencies" [ngValue]="c">{{ c.code }}</option>
+                        <option *ngFor="let d of divisas" [ngValue]="d">{{ d.description }}</option>
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="destino" class="form-label">A</label>
                     <select [(ngModel)]="to" name="to" id="destino" class="form-select form-control shadow-none">
                       <option selected disabled>Selecciona divisa</option>
-                      <option *ngFor="let c of currencies" [ngValue]="c">{{ c.code }}</option>
+                      <option *ngFor="let d of divisas" [ngValue]="d">{{ d.description }}</option>
                     </select>
                 </div>
-                <div class="mb-3">
-                    <input class="form-control resultado shadow-none" type="text" value="{{convertion}}" readonly>
+                <h5 class="text-white">Resultado</h5>
+                <div class="mb-3 resultado text-center">
+                    {{ conversion!=null ? conversion : 0 | currency: to.code }}
                 </div>
                 <button (click)="convert()" type="submit" class="btn btn-formulario shadow-none">CONVERTIR</button>
             </form>

@@ -2,21 +2,36 @@
     <div class="row">
         <main id="peliculas" class="col-8">
             <div class="container">
+                <div class="row justify-content-center my-5">
+                    <h2 class="col-md-8 text-white">Buscar</h2>
+                    <form class="col-md-8 d-flex mt-2" method="get">
+                        <input (change)="clear()" [(ngModel)]="text" name="text" class="form-control me-2" type="search" placeholder="Buscar por nombre" aria-label="Search">
+                        <button (click)="search()" class="btn btn-buscar" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+
                 <div class="row d-flex justify-content-center">
                     <div *ngFor="let movie of movies" class="col-md-6 col-lg-3 my-3 m-lg-4">
                         <div class="card">
                             <div class="imagen">
-                                <img src="assets/img/{{movie.imagen}}" class="card-img-top" alt="">
+                                <img src="{{ movie.image }}" class="card-img-top" alt="">
                                 <div class="card-img-overlay">
-                                    <h6 class="card-title">{{ movie.titulo }}</h6>
-                                    <p class="card-text">{{ movie.descripcion }}</p>
+                                    <h6 class="card-title">{{ movie.title }}</h6>
+                                    <p class="card-text">Una descripcion</p>
                                 </div>
                             </div>
                             <div class="card-footer text-center">
-                                <small class="text-muted">{{ movie.anio }}</small>
+                                <small class="text-muted">{{ movie.year }}</small>
                             </div>
                             <a class="card-link" [routerLink]="['/pagea']"></a>
                         </div>
+                    </div>
+                </div>
+
+                <div *ngIf="notFound" class="row d-flex justify-content-center">
+                    <div class="col-md-8 m-lg-4 text-white text-center">
+                        <h3>No se pudo encontrar "{{ text }}"</h3>
+                        <p>Busca de nuevo o prueba con una palabra clave diferente.</p>
                     </div>
                 </div>
             </div>

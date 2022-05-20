@@ -54,3 +54,24 @@
 #publicidad img {
     width: 100%;
 }
+
+.btn-buscar {
+    background-color: rgba(0, 0, 0, .4);
+    color: #fff !important;
+    border-radius: .8rem;
+    transition: color .3s ease-in-out,background-color .3s ease-in-out !important;
+}
+
+.btn-buscar:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.form-control {
+    color: #333;
+    border-radius: .8rem;
+    border: none;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0.1rem 0.3rem rgba(0, 0, 0, .4) !important;
+}

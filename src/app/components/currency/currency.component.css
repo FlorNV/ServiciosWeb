@@ -69,7 +69,9 @@ tr > th > p {
 .resultado {
     background-color: rgba(255, 255, 255, .5) !important;
     padding: 1rem;
+    border-radius: .8rem;
     color: #000;
+    font-size: 1.5rem;
 }
 
 .form-control {

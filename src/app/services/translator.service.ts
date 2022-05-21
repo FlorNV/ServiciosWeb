@@ -10,7 +10,7 @@ export class TranslatorService {
   constructor(private _htpp: HttpClient) { }
 
   translate(text: string, target: string, source: string): Observable<any> {
-    const httpOptions = {
+    const options = {
       headers: new HttpHeaders({
         "content-type": "application/x-www-form-urlencoded",
         "Accept-Encoding": "application/gzip",
@@ -24,6 +24,6 @@ export class TranslatorService {
     .set('target', target)
     .set('source', source);
     
-    return this._htpp.post("https://google-translate1.p.rapidapi.com/language/translate/v2", body, httpOptions);
+    return this._htpp.post("https://google-translate1.p.rapidapi.com/language/translate/v2", body, options);
   }
 }

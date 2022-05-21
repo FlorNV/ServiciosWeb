@@ -41,7 +41,8 @@ export class TranslatorComponent implements OnInit {
   translateText(){
     // console.log(this.text);
     // console.log(`De ${this.source} a ${this.target}`);
-    this.translatorService.translate(this.text, this.target, this.source).subscribe((result) => {
+    this.translatorService.translate(this.text, this.target, this.source).subscribe(
+      result => {
       this.translatedText = result.data.translations[0].translatedText;
     })
   }

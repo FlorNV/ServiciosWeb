@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Currency } from 'src/app/models/currency';
-import { Fila } from 'src/app/models/fila';
+import { Currency } from 'src/app/models/currencies/currency';
+import { Fila } from 'src/app/models/currencies/fila';
 import { CurrencyService } from 'src/app/services/currency.service';
 
 @Component({

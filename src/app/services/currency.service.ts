@@ -33,4 +33,18 @@ export class CurrencyService {
 
     return this._http.get('https://currency-converter-pro1.p.rapidapi.com/convert', options);
   }
+
+  getConversionTable(base: string, currencies: string): Observable<any>{
+    const headers = new HttpHeaders()
+    .set('X-RapidAPI-Host', 'currency-converter-pro1.p.rapidapi.com')
+    .set('X-RapidAPI-Key', 'fa93237e82mshc9630ae5edb2b78p1ea897jsn892e38d9d423');
+
+    const params = new HttpParams()
+    .set('base', base)
+    .set('currencies', currencies);
+
+    const options = { params: params, headers: headers };
+
+    return this._http.get('https://currency-converter-pro1.p.rapidapi.com/latest-rates', options);
+  }
 }

@@ -6,13 +6,6 @@
             <input (change)="clear()" class="form-control shadow-none me-2" [(ngModel)]="consulta" name="consulta" placeholder="Buscar por nombre" autocomplete="off" spellcheck="false">
             <button (click)="buscarCancion()" type="submit" class="btn btn-buscar shadow-none"><i class="bi bi-search"></i></button>
         </form>
-        <!-- <div class="col-8">
-            <div *ngFor="let c of canciones" class="p-1">
-                <p class="text-white">{{ c.title }}</p>
-                <p class="text-white">{{ c.artist.name }}</p>
-                <audio src="{{ c.preview }}" controls></audio>
-            </div>
-        </div> -->
 
         <div *ngFor="let c of canciones" class="row justify-content-center">
             <div  class="card mb-3 col-lg-6 py-2 cancion-container">
